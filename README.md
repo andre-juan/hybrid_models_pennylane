@@ -6,11 +6,11 @@ Neste repositório o **Classificador Variacional Quântico** (conhecido como VQC
 
 O circuito quântico do VQC pode ser esquematicamente visualizado em 3 componentes, ou camadas:
 
-- **Feature map $\mathcal{U}_{\Phi(\vec{x})}$**: parte do circuito responsável por codificar os dados clássicos $\vec{x}$ em estados quânticos que serão processados no circuito quântico pelo algoritmo. Ou seja, é nesse passo que a informação clássica é representada na forma de informação quântica;<br><br>
+- **Feature map**: parte do circuito responsável por codificar os dados clássicos em estados quânticos que serão processados no circuito quântico pelo algoritmo. Ou seja, é nesse passo que a informação clássica é representada na forma de informação quântica;
 
-- **Variational layer $W(\vec{\theta})$**: parte do circuito parametrizada por $\vec{\theta}$. Esses são os parâmetros ajustados no processo de treinamento;<br><br>
+- **Variational layer**: parte do circuito parametrizada. Esses são os parâmetros ajustados no processo de treinamento;
 
-- **Measurement**: último passo do circuito, que consiste em medidas dos qubits, o que produz informação clássica.<br><br>
+- **Medida**: último passo do circuito, que consiste em medidas dos qubits, o que produz informação clássica.
 
 ### Um método híbrido
 
@@ -18,11 +18,11 @@ O VQC é um **algoritmo híbrido**, isto é, a rotina completa é **parte cláss
 
 Podemos imaginar desta maneira:
 
-- O "**forward propagation**" é quântico;<br><br>
+- O "**forward propagation**" é quântico;
 
-- Com a medida, recuperamos informação clássica, e construímos a função de perda/custo classicamente;<br><br>
+- Com a medida, recuperamos informação clássica, e construímos a função de perda/custo classicamente;
 
-- Os parâmetros $\vec{\theta}$ são atualizados de modo a otimizar classicamente a função de custo;<br><br>
+- Os parâmetros são atualizados de modo a otimizar classicamente a função de custo;
 
 - Neste sentido, o "**backpropagation**" é clássico.
 
